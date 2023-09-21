@@ -44,7 +44,7 @@ function ReceiptForm() {
   const fetchPoints = async (id) => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/api/receipts/${id}/points`
+        `https://fetchrewards-deploy.onrender.com/api/receipts/${id}/points`
       );
       if (response.status === 200) {
         setPoints(response.data.points);
@@ -94,7 +94,7 @@ function ReceiptForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/receipts/process",
+        "https://fetchrewards-deploy.onrender.com/api/receipts/process",
         data
       );
 
